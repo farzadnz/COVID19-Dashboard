@@ -1,6 +1,6 @@
 //Author: Farzad Khaleghi
 
-//window.onload();
+
 window.onload = fetchGlobalData();
 
 
@@ -21,8 +21,6 @@ function fetchGlobalData() {
     .then(data => {
 
         currentData = data;
-        //console.log(data);
-        //console.log(data['cases']["12/20/20"]);
         let allDates = Object.keys(data['cases']);
         
         let mostRecentDate = new Date(allDates[0]);
@@ -35,7 +33,6 @@ function fetchGlobalData() {
             }
         }
 
-        //console.log(mostRecentDate);
         let globalCases = data['cases'][allDates[recentDateIndex]];
         let globalDeaths = data['deaths'][allDates[recentDateIndex]];
         let globalRecovered = data['recovered'][allDates[recentDateIndex]];
@@ -65,7 +62,6 @@ fetch('https://disease.sh/v3/covid-19/historical', {headers: {"Accept":"applicat
 function getCountries(data) {
 
     let allCountries = [];
-    //console.log(data);
 
     data.forEach(element => {
 
@@ -76,7 +72,6 @@ function getCountries(data) {
     });
 
     allCountries.sort();
-    //console.log(allCountries);
 
     allCountries.forEach(el => {
         let dropDownItem = document.createElement('a');
@@ -118,14 +113,13 @@ function getData(data) {
     currentData = data;
 
     let allData = data;
-    //console.log(allData);
+
 
     let allCountrydates = Object.keys(data['timeline']['cases']);
 
-    //console.log(allCountrydates);
         
     let latestDate = new Date(allCountrydates[0]);
-    //console.log('look here:::: ' + allCountrydates[allCountrydates.length - 1]);
+
     let latestDateIndex = 0;
     for (let i = 1; i < allCountrydates.length; i++){
         let currentDate = new Date(allCountrydates[i]);
@@ -271,7 +265,7 @@ function createGraph(graph, graphType){
         }
 
         let currPos = 77;
-        let eachXlen = 237.8 / 30; //
+        let eachXlen = 237.8 / 30;
 
         //drawing all the elements for the x-axis
         for (let i = 0; i < 31; i++){
