@@ -1,0 +1,170 @@
+/*Author: fkha485*/
+body{
+    background-color: rgb(253, 244, 229);
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+#mainHeading{
+    margin: 0;
+    text-align: center;
+    background-color: orange;
+    padding: 40px;
+}
+
+#optionBar{
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    background-color: black;
+    
+    
+}
+
+#globalOption{
+    float: left;
+    width: 50%;
+    padding: 15px 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#dropDownOption{
+    float: left;
+    width: 50%;
+    padding: 15px 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#dropdownMenu {
+    position: relative;
+}
+  
+#dropDownArrow{
+    font-size: 12px;
+}
+
+#dropDownContent{
+    margin-top: 46.5px;
+    position: absolute;
+    margin-left: 50%;
+    max-height: 300px;
+    overflow: scroll;
+    padding: 0;
+    display: none;
+    width: 50%;
+    z-index: 1;
+    background-color: rgb(255, 216, 144);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+
+}
+
+#dropDownContent a{
+    color: black;
+    padding: 12px 8px;
+    display: block;  
+}
+
+#dropDownContent a:hover{
+    background-color: rgb(252, 184, 58);
+    cursor: pointer;
+}
+
+
+#dropDownMenu:hover #dropDownContent{
+    display: block;
+}
+
+#globalOption:hover{
+    cursor: pointer;
+}
+
+
+#countryChoice{
+    margin-top: 50px;
+    text-align: center;
+}
+
+#updateInfo{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+
+#dataGrid{
+    text-align: center;
+}
+
+
+.dataDetails{
+    display: inline-grid;
+    text-align: center;
+    width: 20%;
+}
+
+#total-cases{
+    border: 3px solid red;
+    color: red;
+}
+
+#total-recovered{
+    border: 3px solid green;
+    color: green;
+    
+}
+
+.svgIcons{
+    display: block;
+    margin: auto;
+}
+
+#total-deaths{
+    border: 3px solid red;
+    color: red;
+}
+
+.statsNum{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#graphTitle{
+    text-align: center;
+}
+
+#graphChoices{
+    
+    text-align: center;
+}
+
+/*Changing the layout of the stats boxes if the size of the screen is below 700px*/
+@media screen and (max-width: 1000px){
+
+    .dataDetails{
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    
+}
+
+#graphTypesDiv{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#graphChoicesDiv{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sectionTitles{
+    margin-top: 80px;
+    text-align: center;
+}
+
